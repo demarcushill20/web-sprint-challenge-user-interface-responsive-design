@@ -55,12 +55,15 @@ table {
 html {
     max-width: 1920px;
     min-width: 428px;
+    width: 100%;
     font-size: 62.5%;
+    
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    color: rgb(225, 239, 230);
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
@@ -68,7 +71,7 @@ h1, h2, h3, h4, h5, h6, p, a, i {
 }
 
 h1 {
-    font-size: 7.5rem;
+    font-size: 4.5rem;
 }
 
 h2 {
@@ -79,12 +82,8 @@ h3 {
     font-size: 5rem;
 }
 
-h4 {
-    font-size: 4rem;
-}
-
 p, a {
-    font-size: 3rem;
+    font-size: 2.0rem;
 }
 
 /* header section */
@@ -95,6 +94,38 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.header-container {
+color: rgb(225, 239, 230);
+background: rgb(0, 4, 17);
+background-color: rgb(0, 4, 17, .8);
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+justify-content: space-evenly;
+height: 30%;
+}
+
+header a {
+    color: rgb(225, 239, 230);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+}
+
+nav a {
+    color: rgb(225, 239, 230);
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    width: 20%
 }
 
 /* spacer */
@@ -112,22 +143,140 @@ header {
 /* menu */
 
 .menu {
+    position: relative;
     width: 100%;
     height: auto;
-    background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
+    background-image: linear-gradient(rgba(0, 4, 17, 0.6), rgba(0, 4, 17, 0.6)), url('../img/staff-bartender.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+  }
+  
+  .menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    mix-blend-mode: multiply;
+  }
+  
+  .menu h2,
+  .menu h4,
+  .menu p {
+    color: rgb(225, 239, 230); /* Set the font color to light text */
+    mix-blend-mode: difference;
+  }
+  
+  .menu-container {
+    width: 48%; /* Set each menu container to occupy 48% width */
+    padding: 0 5%;
+  }
+  
+  .menu-title h2 {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    font-size: 4rem;
+    padding-bottom: 7%;
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10%;
+  }
+  
+  .menu-item-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .menu-item-title h4 {
+    font-size: 2.5rem;
+  }
+
+  .menu-item-title .price {
+    padding-right: 5%;
+  }
+
+  .menu-container h2 {
+    font-size: 3.5rem;
+    padding-bottom: 5%;
+  } 
+
+  .menu-section {
+    padding-bottom: 20%;
+  }
+
+  .menu-item p {
+    font-size: 1.5rem;
+  }
 
 /* footer section */
+
 footer {
     width: 100%;
-    height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
 }
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3 {
+    font-size: 2.5rem;
+    padding-left: 10%;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+.footer-right .footer-nav {
+    flex-grow: 1;
+  }
+  
+  .footer-right .copyright {
+    flex: 0;
+    margin-top: auto;
+  }
+  
+.copyright p {
+    font-size: 1rem;
+    text-align: right;
+    padding-right: 10%;
+}
+
+footer a {
+    color: rgb(225, 239, 230);
+}
+
+footer form {
+    padding-left: 10%;
+}
+
 
 /* mobile media query */
 @media (max-width: 428px) {
@@ -144,10 +293,5 @@ footer {
         background-image: none;
     }
 
-    /* footer section */
-    footer {
-        height: auto;
-        padding-top: 2.5vh;
-        font-size: 2rem;
-    }
+    
 }

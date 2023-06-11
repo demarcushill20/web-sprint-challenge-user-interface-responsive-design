@@ -108,6 +108,10 @@ justify-content: space-evenly;
 height: 30%;
 }
 
+header a {
+    color: rgb(225, 239, 230);
+}
+
 nav {
     display: flex;
     justify-content: space-around;
