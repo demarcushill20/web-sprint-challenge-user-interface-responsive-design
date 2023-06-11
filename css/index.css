@@ -180,7 +180,6 @@ nav a {
     margin-top: 3%;
   }
 
-
 /* about us section */
 .about {
     width: 100%;
@@ -337,17 +336,48 @@ footer form {
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
+
+    .header-container h1 {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 4rem;
+
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .header-container {
+        height: 60%;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
     }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1% 0;
+        margin: 0 10%;
+    }
+
+        .portfolio {
+            padding-bottom: 6%;
+        }
     
     /* about us section */
 
     .about {
-        height: 200vh;
+        height: 30%;
     }
     
     .about h2 {
@@ -365,7 +395,8 @@ footer form {
     }
     
     .info {
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
     }
     
     .address {
@@ -387,5 +418,43 @@ footer form {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .copyright p {
+        width: 45%;
+        margin: 0 auto;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    input#email {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    form button {
+        width: 85%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    footer form {
+        padding-left: 0;
+    }
+
+    .footer-left h3 {
+        padding-left: 0;
+        padding-bottom: 3%;
     }
 }
