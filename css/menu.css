@@ -114,6 +114,7 @@ header a {
 
 nav {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     width: 85%;
 }
@@ -125,7 +126,15 @@ nav a {
 .social-links {
     display: flex;
     justify-content: space-around;
-    width: 20%
+    width: 20%;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+nav .links {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 /* spacer */
@@ -288,7 +297,7 @@ footer form {
     font-size: 4rem;
   }
 
-  header nav {
+  header nav .links {
     display: flex;
     flex-direction: column;
     width: 75%;
